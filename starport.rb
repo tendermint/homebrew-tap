@@ -2,16 +2,16 @@
 class Starport < Formula
   desc "CLI tool for developing Cosmos SDK apps."
   homepage "https://github.com/tendermint/starport"
-  version "0.0.2"
+  version "0.0.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/tendermint/starport/releases/download/v0.0.2/starport_0.0.2_darwin_amd64.tar.gz"
-    sha256 "d2b285fb766b445a790727e4eef2a7aa06834bb7a2eef1c54378b93496afbdc8"
+    url "https://github.com/tendermint/starport/releases/download/v0.0.3/starport_0.0.3_darwin_amd64.tar.gz"
+    sha256 "cfe67323eb7408bbf7dbfb860eb88e71dfd53ce5d5f637495854212f7d108efe"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/tendermint/starport/releases/download/v0.0.2/starport_0.0.2_linux_amd64.tar.gz"
-      sha256 "e16d39f97045ccf646c4a3e2198dfb88449ce07229127da65e6951aa882d90be"
+      url "https://github.com/tendermint/starport/releases/download/v0.0.3/starport_0.0.3_linux_amd64.tar.gz"
+      sha256 "431bb39398f5264119bb308480a7005af73a3070540bb8732ef21a9318ee3bed"
     end
   end
 
