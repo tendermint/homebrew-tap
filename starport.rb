@@ -7,7 +7,7 @@ class Starport < Formula
 
   if OS.mac?
     url "https://github.com/tendermint/starport/releases/download/v0.0.10-rc.3/starport_0.0.10-rc.3_darwin_amd64.tar.gz"
-    sha256 "085bcc12f26bc3b385f15f106feaee947e03c60f944518a1a3823eaf6cac28f3"
+    sha256 "df22c61e72ed6869609163f355c16a0e53a9babd80ee27b931afd2494a99d0d4"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/tendermint/starport/releases/download/v0.0.10-rc.3/starport_0.0.10-rc.3_linux_amd64.tar.gz"
