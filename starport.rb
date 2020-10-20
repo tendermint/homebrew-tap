@@ -7,16 +7,16 @@ class Starport < Formula
 
   if OS.mac?
     url "https://github.com/tendermint/starport/releases/download/v0.12.0/starport_0.12.0_darwin_amd64.tar.gz"
-    sha256 "07b79c60fc32fb761b95b63b2c60e9333af45599df37fafb4765562e2b5d59b8"
+    sha256 "5fca4260b82b826724fb172d604dceeb305a0987eeac1738c8c441c9f2b317fa"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/tendermint/starport/releases/download/v0.12.0/starport_0.12.0_linux_amd64.tar.gz"
-      sha256 "07aa0bcd9f53c9431b20f261891305e054b205dec247df0d82b362afcedda1ea"
+      sha256 "3504bdf0229b365efe50df745d30d1a9b73b66a76eec58870db5b9943dd03578"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/tendermint/starport/releases/download/v0.12.0/starport_0.12.0_linux_arm64.tar.gz"
-        sha256 "2e4e1c923e8dab5ebd8a2d2d9f805b151d31dc6b296cd98a7ca14d784d167704"
+        sha256 "13797e59dd4c46102f7fee24247f69ba53ec63978c9685b4c57adde94ad2146f"
       else
       end
     end
