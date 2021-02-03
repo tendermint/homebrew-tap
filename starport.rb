@@ -5,20 +5,20 @@
 class Starport < Formula
   desc "CLI tool for developing Cosmos SDK apps."
   homepage "https://github.com/tendermint/starport"
-  version "0.13.2"
+  version "0.14.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/tendermint/starport/releases/download/v0.13.2/starport_0.13.2_darwin_amd64.tar.gz"
-    sha256 "8ba5bc0c8e3bf1b380b79702c237bcbfbc538e8a25a9c800fc9ec1d000f466eb"
+    url "https://github.com/tendermint/starport/releases/download/v0.14.0/starport_0.14.0_darwin_amd64.tar.gz"
+    sha256 "e56d5ad94ecd9d388a84983b9e87a0547786b00ca1e315df6e59bf323766a6b9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tendermint/starport/releases/download/v0.13.2/starport_0.13.2_linux_amd64.tar.gz"
-    sha256 "a0e298e52ee4844c3477658b53ceccf59c7744613fffebff8162d7c1e64a8d83"
+    url "https://github.com/tendermint/starport/releases/download/v0.14.0/starport_0.14.0_linux_amd64.tar.gz"
+    sha256 "a6063370342f2c3ead4048e0e3c899f257b005bddb04bfba2a9995e642cb6bf2"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/tendermint/starport/releases/download/v0.13.2/starport_0.13.2_linux_arm64.tar.gz"
-    sha256 "500b21c1fdcee1a1059b58db305d57c9aa98a9f34010ed42da76cfdd350133c0"
+    url "https://github.com/tendermint/starport/releases/download/v0.14.0/starport_0.14.0_linux_arm64.tar.gz"
+    sha256 "aebd6a9b4c49912db63b1228bbb71e2f661a69dad5c91c968c064dba79268242"
   end
 
   def install
