@@ -5,16 +5,25 @@
 class Starport < Formula
   desc "Friendly CLI tool for developing Cosmos SDK apps."
   homepage "https://github.com/tendermint/starport"
-  version "0.16.0"
+  version "0.16.1"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tendermint/starport/releases/download/v0.16.0/starport_0.16.0_darwin_amd64.tar.gz"
-    sha256 "b8a766076072faa8bdf418512611d9fb110a07c50d48f9830f8b077f2c6384ff"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/tendermint/starport/releases/download/v0.16.1/starport_0.16.1_darwin_amd64.tar.gz"
+      sha256 "2f41180eb7b062e8119670b5d46b991772757da5aceaf2264cd2dc0082816d16"
+    end
+
+    depends_on arch: [:x86_64]
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tendermint/starport/releases/download/v0.16.0/starport_0.16.0_linux_amd64.tar.gz"
-    sha256 "0544a2413def179790bd6772ad69a72723c12aa3aea65a89f90aaa70f2c4f867"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/tendermint/starport/releases/download/v0.16.1/starport_0.16.1_linux_amd64.tar.gz"
+      sha256 "e03490f1ffb8c8745a40a0bce312b43a649812619e8787bc74c7dc7e27db6f77"
+    end
+
+    depends_on arch: [:x86_64]
   end
 
   def install
