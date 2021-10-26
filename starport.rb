@@ -6,7 +6,6 @@ class Starport < Formula
   desc "Friendly CLI tool for developing Cosmos SDK apps."
   homepage "https://github.com/tendermint/starport"
   version "0.18.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
