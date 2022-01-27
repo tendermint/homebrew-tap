@@ -5,12 +5,12 @@
 class Starport < Formula
   desc "Friendly CLI tool for developing Cosmos SDK apps."
   homepage "https://github.com/tendermint/starport"
-  version "0.19.2"
+  version "0.19.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tendermint/starport/releases/download/v0.19.2/starport_0.19.2_darwin_amd64.tar.gz"
-      sha256 "7156ffbb316dcbe1808aac3fd4b1771e6c6197a68f8f92e1d8a96ae54393f7c0"
+      url "https://github.com/tendermint/starport/releases/download/v0.19.3/starport_0.19.3_darwin_amd64.tar.gz"
+      sha256 "86b983081f9e2a703aa3654efa7b04981a37ee60c6ebc732b9b412b2f7ca58b8"
 
       def install
         bin.install "starport"
@@ -20,8 +20,8 @@ class Starport < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tendermint/starport/releases/download/v0.19.2/starport_0.19.2_linux_amd64.tar.gz"
-      sha256 "619d3eee0ff4fe40e0b47b0579fe81418809b82f3907cf7b4dc73064e52afe42"
+      url "https://github.com/tendermint/starport/releases/download/v0.19.3/starport_0.19.3_linux_amd64.tar.gz"
+      sha256 "89b9efa37304f8543c023e3b32898091ed6be305fc994c4dce8be8af99dec6ae"
 
       def install
         bin.install "starport"
