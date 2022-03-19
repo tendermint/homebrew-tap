@@ -5,23 +5,31 @@
 class Starport < Formula
   desc "Friendly CLI tool for developing Cosmos SDK apps."
   homepage "https://github.com/tendermint/starport"
-  version "0.19.4"
+  version "0.19.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tendermint/starport/releases/download/v0.19.4/starport_0.19.4_darwin_amd64.tar.gz"
-      sha256 "e2f145e4b715387adc9ddcc3f2ba1112c0a08f1c2ac1a9225f20231497a05d9d"
+    url "https://github.com/tendermint/starport/releases/download/v0.19.5/starport_0.19.5_darwin_amd64.tar.gz"
+    sha256 "ca817c58efd5efaf02b4badc42a2f53f666720cc3e4b5a6114408d86c4dcde24"
 
-      def install
-        bin.install "starport"
+    def install
+      bin.install "starport"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Starport
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tendermint/starport/releases/download/v0.19.4/starport_0.19.4_linux_amd64.tar.gz"
-      sha256 "7ff6b5987d69ef8540828d3828722219d88f1a55b1d130ff62ce9bc2832a6f26"
+      url "https://github.com/tendermint/starport/releases/download/v0.19.5/starport_0.19.5_linux_amd64.tar.gz"
+      sha256 "ff5de1a6b955b510bb7a6e083f907e7571279bbc5a11313357ba17436e16ad35"
 
       def install
         bin.install "starport"
